@@ -8,9 +8,9 @@ ns-type                  = Grid
 pbc                      = xyz
 nstlist                  = 10
 rlist                    = 1
-coulombtype              = Cut-off
+coulombtype              = pme
 rcoulomb                 = 1
-vdw-type                 = Cut-off
+vdw-type                 = pme
 rvdw                     = 1
 constraints              = all-bonds
 
@@ -18,7 +18,7 @@ constraints              = all-bonds
 
 
 
-integrator               = steep    ; md          
+integrator               = l-bfgs    ; md          
 dt                       = 0.002
 nsteps                   = 1000           
 
