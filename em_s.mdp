@@ -24,15 +24,15 @@ nsteps                   = 1000
 
 ;;;;;;;;;; minimization
 
-emtol                    = 600
+emtol                    = 160
 emstep                   = 0.01
 
 
 ;;;;;;;;;;;; OUTPUT CONTROL OPTIONS
-nstxout                  = 100
-nstvout                  = 100
+nstxout                  = 1000
+nstvout                  = 1000
 nstlog                   = 1000
-nstcalcenergy            = 100
+nstcalcenergy            = 1000
 nstenergy                = 1000
 energygrps               = 
 
