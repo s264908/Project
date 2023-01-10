@@ -22,7 +22,7 @@ constraints              = all-bonds
 
 integrator               = steep    ; md          
 dt                       = 0.002
-nsteps                   = -1            
+nsteps                   = -1          
 
 ;;;;;;;;;; minimization
 
@@ -40,7 +40,7 @@ energygrps               =
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;, Temperature coupling  
 tcoupl                   = No
-tc-grps                  = Water non-water
+tc-grps                  = Protein non-protein
 tau-t                    = 0.1 0.1
 ref-t                    = 300 300
 
