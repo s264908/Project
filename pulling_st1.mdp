@@ -5,7 +5,7 @@ define      =
 integrator  = md
 dt          = 0.002
 tinit       = 0
-nsteps      = 50000    ; 100 ps
+nsteps      = 100000    ; 200 ps
 nstcomm     = 10
 
 ; Output parameters
@@ -60,5 +60,5 @@ pull_coord1_geometry    = distance  ; simple distance increase
 pull_coord1_dim         = Y N N
 pull_coord1_groups      = 1 2
 pull_coord1_start       = yes       ; define initial COM distance > 0
-pull_coord1_rate        = 0.1      ; 0.01 nm per ps = 10 nm per ns
-pull_coord1_k           = 1000      ; kJ mol^-1 nm^-2
+pull_coord1_rate        = 1      ; 1 nm per ps = 1000 nm per ns
+pull_coord1_k           = 6000      ; kJ mol^-1 nm^-2
