@@ -1,4 +1,5 @@
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; never touch this part
 define                   = 
 comm-mode                = ANGULAR           ;
@@ -20,45 +21,25 @@ constraints              = all-bonds
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;, part to be updated by users
 
 
-integrator               = steep    ; md          
+integrator               = steep             
 dt                       = 0.002
-nsteps                   = -1          
+nsteps                   = 1000000            
 
 ;;;;;;;;;; minimization
 
-emtol                    = 10
+emtol                    = 100
 emstep                   = 0.01
 
 
 ;;;;;;;;;;;; OUTPUT CONTROL OPTIONS
-nstxout                  = 100
-nstvout                  = 100
+nstxout                  = 1000
+nstvout                  = 1000
 nstlog                   = 1000
-nstcalcenergy            = 100
+nstcalcenergy            = 1000
 nstenergy                = 1000
-energygrps               = 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;, Temperature coupling  
-tcoupl                   = No
-tc-grps                  = Protein non-protein
-tau-t                    = 0.1 0.1
-ref-t                    = 300 300
 
 
-; SIMULATED ANNEALING  
-; Type of annealing for each temperature group (no/single/periodic)
-annealing                =                 ; es. single single
-; Number of time points to use for specifying annealing in each group
-annealing-npoints        =                 ; es. 3 3
-; List of times at the annealing points for each group
-annealing-time           =                 ; es. 50 100 150 50 100 150
-; Temp. at each annealing point, for each group.
-annealing-temp           =                 ; es. 300 400 500 300 400 500
 
-; GENERATE VELOCITIES FOR STARTUP RUN
-gen-vel                  = no ; or yes
-gen-temp                 = 300
-gen-seed                 = -1
 
 
 
