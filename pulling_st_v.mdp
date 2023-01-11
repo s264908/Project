@@ -31,7 +31,7 @@ rvdw            = 1.4
 
 ; Berendsen temperature coupling is on in two groups
 Tcoupl      = v-rescale
-tc_grps     = Water   Non-Water
+tc_grps     = Protein   Non-Protein
 tau_t       = 1.0       1.0
 ref_t       = 300       300
 
