@@ -1,26 +1,60 @@
-integrator		= md	
-dt			= 0.002
-nsteps			= 1000000
+include                  = 
+define                   = 
+integrator               = md
+dt                       = 0.002
+nsteps                   = 1000000
+init_step                = 0
+simulation_part          = 1
+comm-mode                = Linear
+nstcomm                  = 1
+comm-grps                = system
 
-nstenergy		= 1000
-nstlog			= 1000
-nstxout			= 1
-nstxtcout   = 1000
+emtol                    = 10
+emstep                   = 0.01
+niter                    = 20
+fcstep                   = 0
+nstcgsteep               = 1000
+nbfgscorr                = 10
 
-constraints		= hbonds 
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 1000
+nstcalcenergy            = 1000
+nstenergy                = 1000
+nstxtcout                = 1000
 
-coulombtype		= pme
-rcoulomb		= 1.0
-rlist			= 1.0
+cutoff-scheme            = Verlet
+nstlist                  = 20
+ns-type                  = Grid
+pbc                      = xyz
+rlist                    = 1.0
+coulombtype              = pme
+coulomb-modifier         = Potential-shift-Verlet
+rcoulomb-switch          = 1.0
+rcoulomb                 = 1.0
+vdw-type                 = cut-off
+vdw-modifier             = Potential-shift-Verlet
+rvdw-switch              = 1.0
+rvdw                     = 1.0
 
-vdwtype			= Cut-off 
-rvdw			= 1.0
+tcoupl                   = v-rescale
+nh-chain-length          = 10
+tc-grps                  = Protein
+tau-t                    = 0.1
+ref-t                    = 300
 
+Pcoupl                   = no
+Pcoupltype               = isotropic
+nstpcouple               = -1
+tau_p                    = 1.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
+refcoord_scaling         = no
 
-gen_vel			= no
-gen-temp		= 300
-gen-seed		= 65823
+gen-vel                  = no
+gen-temp                 = 300
+gen-seed                 = 173529
 
-comm-mode		= angular
-
-epsilon-r		= 80
+constraints              = h-bonds
+constraint-algorithm     = Lincs
