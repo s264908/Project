@@ -34,7 +34,7 @@ tcoupl                   = v-rescale
 nh-chain-length          = 10
 tc-grps                  = non-Water Water 
 tau-t                    = 0.1 0.1
-ref-t                    = 303 303
+ref-t                    = 300 300
 
 gen-vel                  = no
 gen-temp                 = 300
