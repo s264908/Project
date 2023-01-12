@@ -5,6 +5,7 @@ nsteps			= 1000000
 nstenergy		= 1000
 nstlog			= 1000
 nstxout			= 1
+nstxtcout   = 1000
 
 constraints		= hbonds 
 
