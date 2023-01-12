@@ -1,0 +1,64 @@
+title       = Umbrella pulling simulation 
+define      = 
+
+; Run parameters
+integrator  = md
+dt          = 0.002
+tinit       = 0
+nsteps      = 100000    ; 200 ps
+nstcomm     = 10
+
+; Output parameters
+nstxout     = 100      ; every  ps
+nstvout     = 100 
+nstfout     = 100
+nstxtcout   = 100       ; every  ps
+nstenergy   = 1000
+
+; Bond parameters
+
+constraints             = all-bonds
+continuation            = no      ; continuing from NPT 
+
+; Single-range cutoff scheme
+cutoff-scheme   = Verlet
+nstlist         = 20 
+ns_type         = grid 
+rlist           = 1.4
+rcoulomb        = 1.4
+rvdw            = 1.4
+
+
+; Berendsen temperature coupling is on in two groups
+Tcoupl      = v-rescale
+tc_grps     = Protein   
+tau_t       = 0.1     
+ref_t       = 500    
+
+
+; Generate velocities is off
+gen-vel     = yes
+gen-temp    = 500
+gen-seed    = -1
+ 
+; Periodic boundary conditions are on in all directions
+pbc     = xyz
+
+
+; Pull code
+
+pull-nstxout             = 50
+pull-nstfout             = 50
+
+pull                    = yes
+pull_ncoords            = 1         ; only one reaction coordinate 
+pull_ngroups            = 2         ; two groups defining one reaction coordinate 
+pull_group1_name        = pull 
+pull_group2_name        = ref 
+pull_coord1_type        = umbrella  ; harmonic potential
+pull_coord1_geometry    = distance  ; simple distance increase 
+pull_coord1_dim         = Y N N
+pull_coord1_groups      = 1 2
+pull_coord1_start       = yes       ; define initial COM distance > 0
+pull_coord1_rate        = 0.01      ; 0.01 nm per ps = 10 nm per ns
+pull_coord1_k           = 100      ; kJ mol^-1 nm^-2
