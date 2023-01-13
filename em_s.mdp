@@ -35,6 +35,7 @@ nstlog                   = 1000
 nstcalcenergy            = 1000
 nstenergy                = 1000
 energygrps               = 
+nstxtcout                = 1000
 
 
 ; SIMULATED ANNEALING  
