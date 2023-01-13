@@ -26,7 +26,7 @@ nsteps                   = 1000
 
 ;;;;;;;;;; minimization
 
-emtol                    = 600
+emtol                    = 1000
 emstep                   = 0.01
 
 
