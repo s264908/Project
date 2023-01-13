@@ -37,6 +37,7 @@ nstvout                  = 1000
 nstlog                   = 1000
 nstcalcenergy            = 1000
 nstenergy                = 1000
+nstxtcout                = 1000
 
 
 
