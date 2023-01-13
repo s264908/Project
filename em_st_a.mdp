@@ -20,7 +20,7 @@ constraints              = none
 
 integrator               = steep    ; md          
 dt                       = 0.002
-nsteps                   = 1000           
+nsteps                   = 2000           
 
 ;;;;;;;;;; minimization
 
@@ -51,5 +51,4 @@ annealing-temp           =                 ; es. 300 400 500 300 400 500
 gen-vel                  = no ; or yes
 gen-temp                 = 300
 gen-seed                 = -1
-
 
