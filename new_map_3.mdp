@@ -37,6 +37,7 @@ nstlog                   = 1000
 nstcalcenergy            = 100
 nstenergy                = 1000
 energygrps               = 
+nstxtcout                = 1000
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;, Temperature coupling  
 tcoupl                   = No
